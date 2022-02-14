@@ -1,0 +1,34 @@
+<form [formGroup]="studentRefForm">
+  <table>
+    <tr>
+      <td colspan="2" align="center"> Student Entry Form </td>
+    </tr>
+
+    <tr>
+      <th>Roll No:</th>
+      <td><input type="number" formControlName="rollno"></td>
+    </tr>
+    <tr>
+      <th>Name:</th>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <th>Maths:</th>
+      <td><input type="number" formControlName="maths"></td>
+    </tr>
+    <tr>
+      <th>Science:</th>
+      <td><input type="number" formControlName="science"></td>
+    </tr>
+    <tr>
+      <th>History:</th>
+      <td><input type="number" formControlName="history"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" value="Add" [disabled]="studentRefForm.invalid">
+        <input type="reset" value="Clear">
+      </td>
+    </tr>
+  </table>
+</form>
