@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validator, Validators} from "@angular/forms";
+import {Student} from "../student";
+import {StudentService} from "../services/student.service";
 
 @Component({
   selector: 'app-student-entry',
@@ -15,10 +17,15 @@ export class StudentEntryComponent implements OnInit {
     history: new FormControl("", [Validators.min(1), Validators.required])
   });
 
-  constructor() { }
+  constructor(public studentservice:StudentService) { }
 
   ngOnInit(): void {
   }
 
-  
+  onsubmitclick(){
+    let student = this.studentRefForm.value;
+    this.studentservice.student_list.push(new Student(student.rollno,student.name,student.maths,student.science,student.history));
+    this.studentRefForm.reset();
+  }
+
 }
