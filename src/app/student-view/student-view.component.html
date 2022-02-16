@@ -1,1 +1,18 @@
-<p>student-view works!</p>
+<table>
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Maths</th>
+    <th>Science</th>
+    <th>History</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let student of studentservice.student_list">
+    <td>{{ student.rollno }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.maths }}</td>
+    <td>{{ student.science }}</td>
+    <td>{{ student.history }}</td>
+    <td><input type="button" value="Update"> | <input type="submit" value="Delete"></td>
+  </tr>
+</table>
