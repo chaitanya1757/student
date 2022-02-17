@@ -13,4 +13,12 @@ export class StudentViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onupdateclick(rollno:any){
+
+  }
+
+  ondelete(){
+
+  }
+
 }

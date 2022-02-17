@@ -13,6 +13,6 @@
     <td>{{ student.maths }}</td>
     <td>{{ student.science }}</td>
     <td>{{ student.history }}</td>
-    <td><input type="button" value="Update"> | <input type="submit" value="Delete"></td>
+    <td><input type="button" value="Update" (click)="onupdateclick(student.rollno)"> | <input type="submit" value="Delete" (click)="ondelete()"></td>
   </tr>
 </table>
