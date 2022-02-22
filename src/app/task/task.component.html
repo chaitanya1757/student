@@ -1,0 +1,20 @@
+<p>GET API DATA</p>
+<input type="button" value="showdata" (click)="showdataonclick()">
+
+<table>
+  <tr>
+    <th>User Id</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Completed</th>
+
+  </tr>
+  <tr *ngFor="let record of this.taskservice.tasklist">
+          <td>{{record.userId}}</td>
+          <td>{{record.id}}</td>
+          <td>{{record.title}}</td>
+          <td *ngIf="record.completed">{{"\u2714"}}</td>
+          <td *ngIf="!record.completed">{{"\u274C"}}</td>
+  </tr>
+</table>
+
